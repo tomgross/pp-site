@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="itc.pptheme">
+
+    <plone:portlet
+        name="portlets.Navigation"
+        interface="plone.app.portlets.portlets.navigation.INavigationPortlet"
+        assignment="plone.app.portlets.portlets.navigation.Assignment"
+        renderer=".browser.viewlets.NavigationRenderer"
+        addview="plone.app.portlets.portlets.navigation.AddForm"
+        editview="plone.app.portlets.portlets.navigation.EditForm"
+        />
+
+</configure>

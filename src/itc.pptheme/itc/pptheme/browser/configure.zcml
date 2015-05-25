@@ -60,4 +60,11 @@
         layer=".interfaces.IThemeSpecific"
         />
 
+    <browser:page
+        name="upgrade_pp"
+        for="*"
+        permission="zope2.ViewManagementScreens"
+        class=".view.UpgradeIt"
+        />
+
 </configure>

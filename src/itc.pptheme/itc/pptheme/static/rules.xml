@@ -1,0 +1,28 @@
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <theme href="index.html" />
+    <notheme if="$ajax_load" />
+    <notheme if="$authenticated" />
+
+    <replace theme="/html/head/title" content="/html/head/title" />
+
+    <drop css:content="#indices-and-tables" />
+    <drop css:content="#viewlet-above-content-body" />
+    <replace theme="//h1" content="//h1" />
+    <replace theme-children="//h2" css:content-children="#parent-fieldname-description" />
+    <replace css:theme="#content-core" css:content="#content-core" />
+    <replace css:content-children="ul.navTree" css:theme-children="ul#menu" />
+    <drop css:content=".portletHeader" />
+
+    <!-- xsl:template match="ul/@class[contains(., 'navTreeLevel1')]">
+           <xsl:attribute name="class"><xsl:value-of select="." /> sub-menu collapse in</xsl:attribute>
+    </xsl:template --> 
+
+    <!-- replace css:theme-children="#plone-menu" css:content="ul.navTree" /-->
+
+</rules>
+
+

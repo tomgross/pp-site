@@ -114,3 +114,7 @@ body {
     float: right;
     margin: 0.5em;
 }
+
+#portal-languageselector {
+    list-style-type: none;
+}

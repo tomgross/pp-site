@@ -15,6 +15,7 @@
     <replace theme-children="//h2" css:content-children="#parent-fieldname-description" />
     <replace css:theme="#content-core" css:content="#content-core" />
     <replace css:content-children="ul.navTreeLevel0" css:theme-children="ul#menu" />
+    <replace css:theme="#portal-languageselector" css:content="#portal-languageselector" />
     <drop css:content=".portletHeader" />
 
     <!-- xsl:template match="ul/@class[contains(., 'navTreeLevel1')]">

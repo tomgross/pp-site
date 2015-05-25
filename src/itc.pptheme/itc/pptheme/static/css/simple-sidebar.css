@@ -30,10 +30,25 @@ div.hr {
         display: none;
     }
 
+    #top-row {
+        display: none;
+    }
+
     .slicknav_menu {
         display: block;
     }
 }
+
+@media screen and (min-width: 768px) {
+    #top-row {
+        min-height: 150px;
+        border-bottom: 1px dotted #999999;
+        border-top: 1px dotted #999999;
+        margin-top: 10px;
+    }
+
+}
+
 
 body {
   margin: 0px;
@@ -61,4 +76,41 @@ body {
         text-decoration: none;
     }
 
+#menu li:last-child
+{
+    border-bottom: none;
+}
 
+#pp-logo {
+    float: left;
+    padding-top: 15px;
+    padding-left: 29px;
+}
+
+#pp-logo-title {
+    font-weight: bold;
+    font-size: xx-large;
+    color: #7f7f7f;
+    margin-top: 25px;
+    margin-left: 10em;
+}
+
+#pp-logo-subtitle {
+    font-size: large;
+    margin-left: 32.3em;
+    font-weight: bold;
+
+}
+
+.image-left {
+    clear: both;
+    float: left;
+    margin: 0.5em 1em 0.5em 0;
+}
+
+.image-right {
+    border: medium none;
+    clear: both;
+    float: right;
+    margin: 0.5em;
+}

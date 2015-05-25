@@ -14,7 +14,7 @@
     <replace theme="//h1" content="//h1" />
     <replace theme-children="//h2" css:content-children="#parent-fieldname-description" />
     <replace css:theme="#content-core" css:content="#content-core" />
-    <replace css:content-children="ul.navTree" css:theme-children="ul#menu" />
+    <replace css:content-children="ul.navTreeLevel0" css:theme-children="ul#menu" />
     <drop css:content=".portletHeader" />
 
     <!-- xsl:template match="ul/@class[contains(., 'navTreeLevel1')]">
@@ -24,5 +24,3 @@
     <!-- replace css:theme-children="#plone-menu" css:content="ul.navTree" /-->
 
 </rules>
-
-

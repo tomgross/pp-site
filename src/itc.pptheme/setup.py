@@ -11,7 +11,9 @@ setup(name='itc.pptheme',
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
+        "Framework :: Plone :: 4.3",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 2.7",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='web zope plone theme',
@@ -26,8 +28,14 @@ setup(name='itc.pptheme',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+        'plone.api',
+        'z3c.jbot',
+        'plone.app.theming',
+        'plone.app.themingplugins',
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )

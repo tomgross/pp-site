@@ -2,23 +2,12 @@
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
    default_skin="pptheme">
 
- <object name="itc_pptheme_custom_images"
+ <object name="itc_pptheme_custom"
     meta_type="Filesystem Directory View"
-    directory="itc.pptheme:skins/itc_pptheme_custom_images"/>
- <object name="itc_pptheme_custom_templates"
-    meta_type="Filesystem Directory View"
-    directory="itc.pptheme:skins/itc_pptheme_custom_templates"/>
- <object name="itc_pptheme_styles"
-    meta_type="Filesystem Directory View"
-    directory="itc.pptheme:skins/itc_pptheme_styles"/>
+    directory="itc.pptheme:skins/itc_pptheme_custom" />
 
- <skin-path name="pptheme" based-on="Plone Default">
-  <layer name="itc_pptheme_custom_images"
-     insert-after="custom"/>
-  <layer name="itc_pptheme_custom_templates"
-     insert-after="itc_pptheme_custom_images"/>
-  <layer name="itc_pptheme_styles"
-     insert-after="itc_pptheme_custom_templates"/>
+ <skin-path name="pptheme" based-on="*">
+  <layer name="itc_pptheme_custom" insert-after="custom"/>
  </skin-path>
 
 </object>

@@ -1,14 +1,31 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
     xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="itc.pptheme">
 
-   <five:registerPackage package="." initialize=".initialize" />
+   <five:registerPackage package="." />
 
    <include package=".browser" />
 
-   <include file="skins.zcml" />
    <include file="profiles.zcml" />
+   <plone:static
+        directory="static"
+        type="theme"
+        name="itc.pptheme"
+        />
+
+   <!-- File System Directory Views registration -->
+   <cmf:registerDirectory
+       name="itc_pptheme_custom" />
+
+<include package="z3c.jbot" file="meta.zcml" />
+
+<browser:jbot
+    directory="template-overrides"
+    layer=".browser.interfaces.IThemeSpecific" />
+
 
 </configure>

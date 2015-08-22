@@ -1,0 +1,53 @@
+<tal:master define="level options/level|python:0;
+                    children options/children | nothing;
+                    bottomLevel options/bottomLevel | nothing;"
+            i18n:domain="plone">
+
+<metal:main define-macro="nav_main">
+<tal:navitem repeat="node children">
+
+
+<li tal:define="show_children   node/show_children;
+                children        node/children;
+                item_url        node/getURL;
+                item_icon       nocall:node/item_icon;
+                item_type       node/portal_type;
+                remote_url      node/getRemoteUrl;
+                link_remote     node/link_remote;
+                is_current      node/currentItem;
+                is_in_path      node/currentParent;
+                li_class        python:is_current and ' navTreeCurrentNode' or '';
+                li_extr_class   python:is_in_path and ' navTreeItemInPath' or '';
+                li_folder_class python:show_children and ' navTreeFolderish' or '';
+                normalizeString nocall: context/plone_utils/normalizeString;
+                normalizedId    node/normalized_id|nothing;
+                sectionId       string: section-${normalizedId};"
+    tal:condition="python:bottomLevel &lt;= 0 or level &lt;= bottomLevel"
+    tal:attributes="class python: children and 'dropdown' or (is_current and 'active' or None)">
+
+    <tal:level define="item_class string:state-${node/normalized_review_state};
+                       item_type_class python:'contenttype-' + normalizeString(item_type);
+                       item_class python:is_current and item_class + ' navTreeCurrentItem' or item_class;">
+        <a tal:attributes="href python:link_remote and remote_url or item_url;
+                           title node/Description;
+                           class python:children and 'dropdown-toggle' or None"
+           tal:condition="not:children">
+            <span tal:replace="node/Title">Selected Item Title</span>
+        </a>
+        <a tal:attributes="href python:link_remote and remote_url or item_url;
+                           title node/Description;"
+           tal:condition="children"
+           class="dropdown-toggle"
+           href="#">
+            <span tal:replace="node/Title">Selected Item Title</span>
+        </a>
+
+    <ul tal:attributes="class python:children and 'dropdown-menu' or None"
+        tal:condition="python: len(children) > 0 and show_children">  
+        <span tal:replace="structure python:view.recurse(children=children, level=level+1, bottomLevel=bottomLevel)" />
+    </ul>
+    </tal:level>
+</li>
+</tal:navitem>
+</metal:main>
+</tal:master>

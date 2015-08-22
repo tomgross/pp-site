@@ -1,0 +1,6 @@
+<layers>
+    <layer
+        name="pptheme"
+         interface="itc.pptheme.browser.interfaces.IThemeSpecific"
+         />
+</layers>

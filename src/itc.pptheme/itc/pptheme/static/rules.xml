@@ -12,10 +12,11 @@
     <drop css:content="#indices-and-tables" />
     <drop css:content="#viewlet-above-content-body" />
     <replace theme="//h1" content="//h1" />
+    <replace theme="//ul[@id = 'portal-siteactions']" content="//ul[@id = 'portal-siteactions']" />
     <replace theme-children="//h2" css:content-children="#parent-fieldname-description" />
     <replace css:theme-children="#content-core" css:content-children="#content-core" />
     <replace css:content-children="ul.navTreeLevel0" css:theme-children="ul.navbar-nav" />
-    <replace css:theme="#portal-languageselector" css:content="#portal-languageselector" />
+    <replace theme-children="//ul[@id = 'portal-languageselector']" content-children="//ul[@id = 'portal-languageselector']" />
     <drop css:content=".portletHeader" />
 
 </rules>

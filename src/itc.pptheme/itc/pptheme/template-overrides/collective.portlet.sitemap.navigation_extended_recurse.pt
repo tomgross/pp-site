@@ -23,7 +23,7 @@
                 normalizedId    node/normalized_id|nothing;
                 sectionId       string: section-${normalizedId};"
     tal:condition="python:bottomLevel &lt;= 0 or level &lt;= bottomLevel"
-    tal:attributes="class python: children and 'dropdown' or (is_current and 'active' or None)">
+    tal:attributes="class python: children and  (is_current and 'dropdown active' or 'dropdown') or (is_current and 'active' or None)">
 
     <tal:level define="item_class string:state-${node/normalized_review_state};
                        item_type_class python:'contenttype-' + normalizeString(item_type);
@@ -39,11 +39,11 @@
            tal:condition="children"
            class="dropdown-toggle"
            href="#">
-            <span tal:replace="node/Title">Selected Item Title</span>
+            <span tal:replace="node/Title">Selected Item Title</span><i tal:condition="python:level==1" class="fa fa-angle-down"></i>
         </a>
 
     <ul tal:attributes="class python:children and 'dropdown-menu' or None"
-        tal:condition="python: len(children) > 0 and show_children">  
+        tal:condition="python: len(children) > 0 and show_children">
         <span tal:replace="structure python:view.recurse(children=children, level=level+1, bottomLevel=bottomLevel)" />
     </ul>
     </tal:level>

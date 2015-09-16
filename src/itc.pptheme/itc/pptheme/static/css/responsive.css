@@ -12,7 +12,10 @@
     margin-right: -10px;
   }
 
-  
+ #left-right-border {
+  margin-left: 9em;
+  margin-right: 9em;
+}
 
 }
 
@@ -95,6 +98,10 @@
     margin-right: 0;
   }
 
+  #left-right-border {
+  margin-left: 9em;
+  margin-right: 9em;
+}
 }
 
 
@@ -183,6 +190,11 @@
   .blog .blog-item .entry-meta > span a{
     font-size: 10px;
   }
+
+  #left-right-border {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
 }
 
 /* xs */
@@ -291,13 +303,19 @@
   .post_reply_comments {
     padding-left: 20px;
   }
-    
+
+   #left-right-border {
+  margin-left: 0em;
+  margin-right: 0em;
 
 }
 
 /* XS Portrait */
 @media (max-width: 480px) {
 
+      #left-right-border {
+  margin-left: 0em;
+  margin-right: 0em;
 
 }
 

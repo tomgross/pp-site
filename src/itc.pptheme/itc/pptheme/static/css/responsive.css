@@ -110,7 +110,7 @@
   /* Make Navigation Toggle on Desktop Hover */
 
 
-  #pp-title-image {
+  #top-row {
      display: none;
   }
 
@@ -206,7 +206,7 @@
 
 /* xs */
 @media (max-width: 767px) {
-  #pp-title-image {
+  #top-row {
      display: none;
   }
   .container > .navbar-header, .container > .navbar-collapse{
@@ -322,7 +322,7 @@
 
 /* XS Portrait */
 @media (max-width: 480px) {
-  #pp-title-image {
+  #top-row {
      display: none;
   }
 

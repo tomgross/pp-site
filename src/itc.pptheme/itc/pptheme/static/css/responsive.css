@@ -108,6 +108,12 @@
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
   /* Make Navigation Toggle on Desktop Hover */
+
+
+  #pp-logo {
+     display: none;
+  }
+
   .dropdown:hover .dropdown-menu {
       display: block;
       -webkit-animation: fadeInUp 400ms;
@@ -199,6 +205,9 @@
 
 /* xs */
 @media (max-width: 767px) {
+  #pp-logo {
+     display: none;
+  }
   .container > .navbar-header, .container > .navbar-collapse{
     margin-left: 0;
   }
@@ -312,6 +321,9 @@
 
 /* XS Portrait */
 @media (max-width: 480px) {
+  #pp-logo {
+     display: none;
+  }
 
       #left-right-border {
   margin-left: 0em;

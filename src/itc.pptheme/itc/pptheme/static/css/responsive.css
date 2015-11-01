@@ -110,9 +110,10 @@
   /* Make Navigation Toggle on Desktop Hover */
 
 
-  #pp-logo {
+  #pp-title-image {
      display: none;
   }
+
 
   .dropdown:hover .dropdown-menu {
       display: block;
@@ -205,7 +206,7 @@
 
 /* xs */
 @media (max-width: 767px) {
-  #pp-logo {
+  #pp-title-image {
      display: none;
   }
   .container > .navbar-header, .container > .navbar-collapse{
@@ -321,7 +322,7 @@
 
 /* XS Portrait */
 @media (max-width: 480px) {
-  #pp-logo {
+  #pp-title-image {
      display: none;
   }
 

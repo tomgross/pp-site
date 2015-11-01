@@ -31,7 +31,7 @@ setup(name='itc.pptheme',
         'plone.api',
         'z3c.jbot',
         'plone.app.theming',
-        'plone.app.themingplugins',
+#        'plone.app.themingplugins',
       ],
       entry_points="""
       # -*- Entry points: -*-

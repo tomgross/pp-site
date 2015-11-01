@@ -109,12 +109,9 @@
 @media (min-width: 768px) and (max-width: 991px) {
   /* Make Navigation Toggle on Desktop Hover */
   body{font-size: 16px;}
-
-
-  #top-row {
+  .nomobile {
      display: none;
   }
-
 
   .dropdown:hover .dropdown-menu {
       display: block;
@@ -208,10 +205,10 @@
 /* xs */
 @media (max-width: 767px) {
   body{font-size: 18px;}
-
-  #top-row {
+  .nomobile {
      display: none;
   }
+
   .container > .navbar-header, .container > .navbar-collapse{
     margin-left: 0;
   }
@@ -285,7 +282,7 @@
 /* XS Portrait */
 @media (max-width: 480px) {
   body{font-size: 18px;}
-  #top-row {
+  .nomobile {
      display: none;
   }
 

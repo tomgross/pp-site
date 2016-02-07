@@ -38,6 +38,7 @@
                            title node/Description;"
            tal:condition="children"
            class="dropdown-toggle"
+           data-toggle="dropdown"
            href="#">
             <span tal:replace="node/Title">Selected Item Title</span><i tal:condition="python:level==1" class="fa fa-angle-down"></i>
         </a>

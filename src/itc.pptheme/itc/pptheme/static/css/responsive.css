@@ -1,5 +1,8 @@
 /* lg */ 
 @media (min-width: 1200px) {
+  .nodesktop {
+     display: none;
+  }
  /* Make Navigation Toggle on Desktop Hover */
   .dropdown:hover .dropdown-menu {
       display: block;
@@ -21,7 +24,9 @@
 
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
-  
+  .nodesktop {
+     display: none;
+  }
  /* Make Navigation Toggle on Desktop Hover */
   .dropdown:hover .dropdown-menu {
       display: block;

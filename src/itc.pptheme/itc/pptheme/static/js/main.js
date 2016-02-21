@@ -7,3 +7,20 @@ $(document).ready(function(){
     }
   }).resize();
 });
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop()>0)
+     {
+        $('#top-row').fadeOut('fast', function() {
+    $( "#header" ).height( 125 );
+    $("#margin-top").css({'margin-top': 125});
+  });
+     }
+    else
+     {
+      $('#top-row').fadeIn('slow');
+     }
+ });
+
+

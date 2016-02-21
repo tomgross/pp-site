@@ -159,11 +159,6 @@ body > section {
 
 #header {
   max-width: 1024px;
-  margin-bottom: 2em;
-}
-
-#header .search{
-  display: inline-block;
 }
 
 .navbar>.container .navbar-brand{
@@ -172,6 +167,7 @@ body > section {
 
  .dottedborder {
         border-top: 1px dotted #999999;
+        width: 1024px;
     }
 
 .top-bar {
@@ -201,10 +197,6 @@ body > section {
   color: #000;
 }
 
-
-.social{
-  text-align: right;
-}
 
 .social-share{
  display: inline-block;
@@ -619,8 +611,6 @@ a.accordion-toggle  i{
 #wrapper {
   max-width: 1200px;
 }
-
-
 
 .image-right {
     border: none;

@@ -37,7 +37,7 @@
         <a tal:attributes="href python:link_remote and remote_url or item_url;
                            title node/Description;"
            tal:condition="children"
-           class="dropdown-toggle"
+           class="dropdown-toggle clickable-dropdown"
            data-toggle="dropdown"
            href="#">
             <span tal:replace="node/Title">Selected Item Title</span><i tal:condition="python:level==1" class="fa fa-angle-down"></i>

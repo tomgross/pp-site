@@ -9,8 +9,9 @@
 
     <copy attributes="*" css:theme="html" css:content="html" />
     <replace theme="/html/head/title" content="/html/head/title" />
+    <after theme="/html/head/title" content="/html/head/link[@rel='canonical'][1]" />
     <after theme="/html/head/title" content="/html/head/meta" />
-    <before theme="/html/head/link" content="/html/head/link[@rel='canonical'][1]" />
+
 
     <drop css:content="#indices-and-tables" />
     <replace theme="//h1" content="//h1" />

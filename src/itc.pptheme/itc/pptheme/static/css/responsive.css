@@ -11,11 +11,6 @@
       animation: fadeInUp 400ms;
   }
 
-  #portfolio .row {
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-
  #left-right-border {
   margin-left: 4em;
   margin-right: 8em;
@@ -28,11 +23,12 @@
     position: fixed;
     height: 270px;
     top: 0;
-    z-index: 1;
 }
 #content{
     margin-top: 270px;
 }
+
+
 
 
 }
@@ -86,6 +82,7 @@
 }
 
 
+
 }
 
 
@@ -109,17 +106,20 @@
 }
 
 
+  .navbar-nav > li {
+     margin-left: 10px;
+  }
 #header {
     background: #fff;
     position: fixed;
     height: 125px;
-    width: 100%;
     top: 0;
     z-index: 1;
 }
 #content{
     margin-top: 125px;
 }
+
 
 }
 
@@ -132,10 +132,6 @@
 
   .container > .navbar-header, .container > .navbar-collapse{
     margin-left: 0;
-  }
-
-  input.search-form:hover {
-    width: 120px;
   }
 
   .navbar-nav > li {
@@ -159,8 +155,8 @@
   }
 
    #left-right-border {
-    margin-left: 0em;
-    margin-right: 0em;
+    margin-left: 0.5em;
+    margin-right: 0;
   }
 
 /* XS Portrait */
@@ -176,3 +172,4 @@
 
 }
 
+}}

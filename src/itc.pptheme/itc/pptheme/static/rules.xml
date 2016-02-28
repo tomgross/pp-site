@@ -16,7 +16,7 @@
     <replace theme="//h1" content="//h1" />
     <replace theme="//ul[@id = 'portal-siteactions']" content="//ul[@id = 'portal-siteactions']" />
     <replace theme-children="//h2" css:content-children="#parent-fieldname-description" />
-    <replace css:theme-children="#content-core" css:content-children="#content" />
+    <replace css:theme-children="#content" css:content-children="#content" />
     <replace css:content-children="ul.navTreeLevel0" css:theme-children="ul.navbar-nav" />
     <replace theme-children="//ul[@id = 'portal-languageselector']" content-children="//ul[@id = 'portal-languageselector']" />
     <drop css:content=".portletHeader" />

@@ -1,7 +1,6 @@
 <metal:page define-macro="master">
 <tal:doctype tal:replace="structure string:&lt;!DOCTYPE html&gt;" />
-
-<html xmlns="http://www.w3.org/1999/xhtml"
+<html
     tal:define="portal_state context/@@plone_portal_state;
         context_state context/@@plone_context_state;
         plone_view context/@@plone;
@@ -44,14 +43,12 @@
     </tal:notajax>
 </head>
 
-<body tal:define="isRTL portal_state/is_rtl;
+<body dir="ltr" tal:define="isRTL nothing;
                   sl python:plone_view.have_portlets('plone.leftcolumn', view);
                   sr python:plone_view.have_portlets('plone.rightcolumn', view);
                   body_class python:plone_view.bodyClass(template, view);
                   classes python:context.restrictedTraverse('@@sunburstview').getColumnsClasses(view)"
-    tal:attributes="class body_class;
-                    dir python:isRTL and 'rtl' or 'ltr'">
-
+    tal:attributes="class body_class;">
 <div id="visual-portal-wrapper">
 
         <div id="portal-top"

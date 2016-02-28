@@ -1,0 +1,6 @@
+#!/bin/sh
+
+SCRIPTDIR=`dirname $0` 
+BASEPATH=$SCRIPTDIR/../src/itc.pptheme/itc/pptheme/static
+cat $BASEPATH/css/bootstrap.min.css $BASEPATH/css/font-awesome.css $BASEPATH/css/main.css $BASEPATH/css/responsive.css | $SCRIPTDIR/cleancss -o $BASEPATH/css/a.min.css
+$SCRIPTDIR/uglifyjs $BASEPATH/js/jquery.js $BASEPATH/js/bootstrap.min.js $BASEPATH/js/main.js -o $BASEPATH/js/a.min.js

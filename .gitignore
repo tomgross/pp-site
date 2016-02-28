@@ -64,3 +64,4 @@ target/
 /bin/instance
 /bin/node
 /bin/npm
+/bin/uglifyjs

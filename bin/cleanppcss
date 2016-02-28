@@ -1,5 +1,0 @@
-#!/bin/sh
-
-SCRIPTDIR=`dirname $0` 
-BASEPATH=$SCRIPTDIR/../src/itc.pptheme/itc/pptheme/static/css
-cat $BASEPATH/bootstrap.min.css $BASEPATH/font-awesome.css $BASEPATH/main.css $BASEPATH/responsive.css | $SCRIPTDIR/cleancss -o $BASEPATH/a.min.css

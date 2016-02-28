@@ -23,6 +23,7 @@
     position: fixed;
     height: 270px;
     top: 0;
+    z-index: 999;
 }
 #content{
     margin-top: 270px;
@@ -67,7 +68,7 @@
 
   #left-right-border {
   margin-left: 2em;
-  margin-right: 8em;
+  margin-right: 2em;
 }
 
 #header {
@@ -75,7 +76,8 @@
     position: fixed;
     height: 270px;
     top: 0;
-    z-index: 1;
+    z-index: 999;
+    width: 100%;
 }
 #content{
     margin-top: 270px;
@@ -114,7 +116,7 @@
     position: fixed;
     height: 125px;
     top: 0;
-    z-index: 1;
+    z-index: 999;
 }
 #content{
     margin-top: 125px;
@@ -142,34 +144,13 @@
     display: none;
   }
 
-  #footer .col-sm-6{
-      text-align:center;
-  }
-  
-   #footer .pull-right{
-      float: none !important;
-  }
-
   ul.social_icons li{
     margin-right: 0;
   }
 
    #left-right-border {
     margin-left: 0.5em;
-    margin-right: 0;
+    margin-right: 0.5em;
   }
-
-/* XS Portrait */
-@media (max-width: 480px) {
-  body{font-size: 18px;}
-  .nomobile {
-     display: none;
-  }
-
-      #left-right-border {
-  margin-left: 1em;
-  margin-right: 0em;
 
 }
-
-}}

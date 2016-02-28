@@ -3,6 +3,7 @@
   .nodesktop {
      display: none;
   }
+
  /* Make Navigation Toggle on Desktop Hover */
   .dropdown:hover .dropdown-menu {
       display: block;
@@ -26,12 +27,12 @@
 #header {
     background: #fff;
     position: fixed;
-    height: 250px;
+    height: 270px;
     top: 0;
     z-index: 1;
 }
 #content{
-    margin-top: 250px;
+    margin-top: 270px;
 }
 
 
@@ -119,20 +120,20 @@
   }
 
   #left-right-border {
-  margin-left: 9em;
-  margin-right: 9em;
+  margin-left: 2em;
+  margin-right: 8em;
 }
 
 
 #header {
     background: #fff;
     position: fixed;
-    height: 250px;
+    height: 270px;
     top: 0;
     z-index: 1;
 }
 #content{
-    margin-top: 250px;
+    margin-top: 270px;
 }
 
 

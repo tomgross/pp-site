@@ -1,9 +1,0 @@
-<object name="portal_skins" allow_any="False" cookie_persistence="False"
-    default_skin="pptheme">
-
-    <!-- define skins-based folder objects here if any -->
-
-    <skin-path name="pptheme" based-on="Sunburst Theme">
-    </skin-path>
-
-</object>

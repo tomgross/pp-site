@@ -8,6 +8,8 @@
     <notheme if="$authenticated" />
 
     <replace theme="/html/head/title" content="/html/head/title" />
+    <after theme="/html/head/meta" content="/html/head/meta" />
+    <after theme="/html/head/meta" content="/html/head/link[@rel='canonical'][1]" />
 
     <drop css:content="#indices-and-tables" />
     <!-- drop css:content="#viewlet-above-content-body" / -->

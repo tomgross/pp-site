@@ -7,7 +7,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-bin/
 env/
 build/
 develop-eggs/
@@ -59,3 +58,9 @@ target/
 
 # IDE
 .idea
+
+/bin/buildout
+/bin/cleancss
+/bin/instance
+/bin/node
+/bin/npm

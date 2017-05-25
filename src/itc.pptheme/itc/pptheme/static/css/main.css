@@ -430,6 +430,11 @@ ul.social-share li a:hover {
     padding-left: 0.2em;
 }
 
+.fieldErrorBox {
+    background-color: #a3163b;
+    color: white;
+}
+
 .container {
     max-width: 1024px;
 }

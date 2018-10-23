@@ -11,7 +11,9 @@
     <replace theme="/html/head/title" content="/html/head/title" />
     <after theme="/html/head/title" content="/html/head/link[@rel='canonical'][1]" />
     <after theme="/html/head/title" content="/html/head/meta" />
-
+    
+    <after theme="//script[@id='gtm']" content="//script[@id='cookieconsent-banner-configuration-label']" />
+    <after theme="//script[@id='gtm']" content="//script[@id='cookieconsent-banner-configuration']" />
 
     <drop css:content="#indices-and-tables" />
     <replace theme="//h1" content="//h1" />

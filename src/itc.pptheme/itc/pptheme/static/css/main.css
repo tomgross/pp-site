@@ -442,3 +442,29 @@ ul.social-share li a:hover {
 .right-box {
     align: right;
 }
+
+input[type="text"], textarea {
+	width: 100%
+}
+
+table.invisible td, table.invisible th, table.plain td, table.plain th, table.listing td, table.listing th {
+    padding: 0.5em 1em;
+    vertical-align: top;
+}
+
+div.formControls input.context { 
+    background-color: #a3163b;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div.label {
+	font-size: 100%;
+	color: #4e4e4e;
+	padding-left: 0;
+}
+
+div.field {
+	margin-top: 1em;
+}

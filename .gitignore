@@ -65,3 +65,12 @@ target/
 /bin/node
 /bin/npm
 /bin/uglifyjs
+/bin/activate*
+/bin/easy*
+/bin/pip*
+/bin/py*
+/bin/wheel
+
+pip-selfcheck.json
+
+

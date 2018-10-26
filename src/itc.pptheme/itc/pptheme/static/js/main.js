@@ -11,9 +11,9 @@ $(document).ready(function(){
       $('#top-row').show();
     }
 
-    view_width = $('#footer').width();
+//    view_width = $('#footer').width();
     $('#header').width(view_width);
-    $('#content').width(view_width);
+//    $('#content').width(view_width);
   }).resize();
 });
 

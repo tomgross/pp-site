@@ -23,7 +23,7 @@
     <replace theme-children="//div[@id = 'right']" content-children="//div[@id = 'portal-column-two']" />
     <replace css:content-children="ul.navTreeLevel0" css:theme-children="ul.navbar-nav" />
     <replace theme-children="//ul[@id = 'portal-languageselector']" content-children="//ul[@id = 'portal-languageselector']" />
-    <drop css:content=".portletHeader" />
+    <!-- drop css:content=".portletHeader" / -->
 
     <!-- language conditions -->
     <drop theme="//img[@id = 'pp-title-image-en']" if-not-content="//html[@lang = 'de']" />
@@ -32,5 +32,4 @@
     <drop theme="//a[@title = 'Kontakt']" if-not-content="//html[@lang = 'de']" />
     <drop theme="//a[@title = 'Contact']" if-content="//html[@lang = 'de']" />
 
-    
 </rules>

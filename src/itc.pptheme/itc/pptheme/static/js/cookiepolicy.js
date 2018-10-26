@@ -339,7 +339,11 @@
 
       // IE is not able to read script content as simple text
       bannerRawConf = $('#' + BANNER_CONF_ID).text() || $('#' + BANNER_CONF_ID).html();
-      bannerConfiguration = $.parseJSON(bannerRawConf);
+      try {
+        bannerConfiguration = $.parseJSON(bannerRawConf);
+      } catch(e) {
+        console.warn(bannerRawConf + ' could not be parsed');
+      }
 
       if (!bannerConfiguration || bannerConfiguration.cookie_consent_configuration.length===0) {
         // No configuration provided: no output

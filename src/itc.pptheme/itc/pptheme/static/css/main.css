@@ -110,6 +110,7 @@ body > section {
 
 #header {
   max-width: 1024px;
+  width: 100%;
   padding-left: 0px;
 }
 
@@ -468,3 +469,21 @@ div.label {
 div.field {
 	margin-top: 1em;
 }
+
+div#right div.portletStaticText {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border: dotted 1px;
+    margin-right: -10px;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+div.portlet-static-fadein {
+     display: none;
+
+  animation-duration: 3s;
+  animation-delay: 1s;
+
+}
+

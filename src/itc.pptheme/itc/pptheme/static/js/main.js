@@ -15,10 +15,6 @@ $(document).ready(function(){
     $('#header').width(view_width);
   }).resize();
 
-
-  $('div.portlet-static-fadein').show().addClass('bounceIn');
-
-
 });
 
 

@@ -477,13 +477,9 @@ div#right div.portletStaticText {
     margin-right: -10px;
     padding-top: 0.5em;
     padding-left: 0.5em;
-}
 
-div.portlet-static-fadein {
-     display: none;
-
-  animation-duration: 3s;
-  animation-delay: 1s;
+    animation-duration: 3s;
+    animation-delay: 1s;
 
 }
 

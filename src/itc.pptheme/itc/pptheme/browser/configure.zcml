@@ -67,4 +67,16 @@
         class=".view.UpgradeIt"
         />
 
+     <!-- Register the portlet -->
+     <plone:portlet
+         name="itc.portlet.static.AnimateStaticPortlet"
+         interface=".static.IAnimateStaticPortlet"
+         assignment=".static.Assignment"
+         view_permission="zope2.View"
+         edit_permission="cmf.ModifyPortalContent"
+         renderer=".static.Renderer"
+         addview=".static.AddForm"
+         editview=".static.EditForm"
+         />
+
 </configure>

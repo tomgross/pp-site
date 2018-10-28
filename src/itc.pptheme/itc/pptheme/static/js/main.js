@@ -15,6 +15,8 @@ $(document).ready(function(){
     $('#header').width(view_width);
   }).resize();
 
+  $('dl.portalMessage').prependTo('#fg-base-edit');
+
 });
 
 

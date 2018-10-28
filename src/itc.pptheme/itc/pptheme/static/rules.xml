@@ -11,6 +11,8 @@
     <replace theme="/html/head/title" content="/html/head/title" />
     <after theme="/html/head/title" content="/html/head/link[@rel='canonical'][1]" />
     <after theme="/html/head/title" content="/html/head/meta" />
+
+    <after css:theme="#content" css:content="dl.portalMessage" />
     
     <after theme="//script[@id='gtm']" content="//script[@id='cookieconsent-banner-configuration-label']" />
     <after theme="//script[@id='gtm']" content="//script[@id='cookieconsent-banner-configuration']" />

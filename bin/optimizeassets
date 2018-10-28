@@ -3,4 +3,4 @@
 SCRIPTDIR=`dirname $0` 
 BASEPATH=$SCRIPTDIR/../src/itc.pptheme/itc/pptheme/static
 cat $BASEPATH/css/bootstrap.min.css $BASEPATH/css/animate.css $BASEPATH/css/font-awesome.css $BASEPATH/css/main.css $BASEPATH/css/responsive.css $BASEPATH/css/cookiepolicy.css | $SCRIPTDIR/cleancss -o $BASEPATH/css/a.min.css
-$SCRIPTDIR/uglifyjs $BASEPATH/js/jquery.js $BASEPATH/js/bootstrap.min.js $BASEPATH/js/main.js $BASEPATH/js/cookiepolicy.js -o $BASEPATH/js/a.min.js
+$SCRIPTDIR/uglifyjs $BASEPATH/js/jquery.js $BASEPATH/js/bootstrap.min.js $BASEPATH/js/cookiepolicy.js $BASEPATH/js/main.js -o $BASEPATH/js/a.min.js

@@ -474,7 +474,7 @@ div#right div.portletStaticText {
     margin-top: 0;
     margin-bottom: 20px;
     border: dotted 1px;
-    margin-right: -10px;
+    margin-right: 7px;
     padding-top: 0.5em;
     padding-left: 0.5em;
 
@@ -483,3 +483,30 @@ div#right div.portletStaticText {
 
 }
 
+dl.error {
+    border-color: red;
+    clear: both;
+    margin: 1em;
+}
+
+dl.error > dt {
+    background-color: #d00;
+    color: white;
+    font-weight: bold;
+    float: left;
+    margin: 0 0.5em 0 0;
+    padding: 0.5em 0.75em;
+    line-height: 1.25em;
+}
+
+.error > dd, .error > .last {
+    background-color: #fdc;
+    padding: 0.5em 0.5em;
+    margin: 0;
+    line-height: 1.25em;
+}
+
+div#right {
+    position: sticky;
+    top:125px;
+}

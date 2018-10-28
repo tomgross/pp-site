@@ -12,8 +12,6 @@ from zope.interface import implementer
 from zope.schema.vocabulary import SimpleVocabulary
 
 
-_ = unicode   # XXX
-
 effects = SimpleVocabulary.fromValues([
     "bounce",
     "flash",
@@ -94,6 +92,8 @@ effects = SimpleVocabulary.fromValues([
 ])
 
 
+_ = unicode
+
 class IAnimateStaticPortlet(IStaticPortlet):
     """A portlet which renders predefined static HTML.
 
@@ -129,7 +129,7 @@ class Assignment(BaseAssignment):
         "manage portlets" screen. Here, we use the title that the user gave or
         static string if title not defined.
         """
-        return self.header or _(u'portlet_animate_static', default=u"Animate Static Portlet")
+        return self.header or _(u'Animation Portlet')
 
 
 class Renderer(BaseRenderer):

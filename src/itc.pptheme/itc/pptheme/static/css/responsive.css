@@ -30,9 +30,9 @@
 }
 
 #right {
-    margin-top: 270px;
+    position: sticky;
+    top:270px;
 }
-
 
 }
 
@@ -46,22 +46,6 @@
       display: block;
       -webkit-animation: fadeInUp 400ms;
       animation: fadeInUp 400ms;
-  }
-
-  .team-bar .first-arrow {
-    width: 21%;
-  }
-
-  .team-bar .second-arrow {
-    width: 20%;
-  }
-
-  .team-bar .third-arrow {
-    width: 21%;
-  }
-
-  .team-bar .fourth-arrow {
-    width: 20%;
   }
 
   ul.social_icons li{
@@ -85,6 +69,10 @@
     margin-top: 270px;
 }
 
+#right {
+    position: sticky;
+    top:270px;
+}
 
 
 }

@@ -155,4 +155,16 @@
     margin-right: 0.5em;
   }
 
+  #header {
+    background: #fff;
+    position: fixed;
+    height: 125px;
+    top: 0;
+    z-index: 999;
+}
+#content{
+    margin-top: 125px;
+}
+
+
 }

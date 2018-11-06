@@ -61,10 +61,11 @@
         />
 
     <browser:page
-        name="upgrade_pp"
+        name="evaluate"
         for="*"
-        permission="zope2.ViewManagementScreens"
-        class=".view.UpgradeIt"
+        permission="zope2.View"
+        class=".view.EvaluateTestView"
+        template="evaluate.pt"
         />
 
      <!-- Register the portlet -->

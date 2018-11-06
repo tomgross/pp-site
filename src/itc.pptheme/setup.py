@@ -27,11 +27,11 @@ setup(name='itc.pptheme',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
-        'plone.api',
-        'z3c.jbot',
-        'plone.app.theming',
-#        'plone.app.themingplugins',
+          'plone.api',
+          'z3c.jbot',
+          'plone.app.theming',
+          'matplotlib',
+          'six',
       ],
       entry_points="""
       # -*- Entry points: -*-

@@ -88,7 +88,7 @@ class EvaluateTestView(BrowserView):
                     result[group_title].details[title] = element.get('default')
                 if group_title not in df:
                     df[group_title] = 0
-                df[group_title] += self.pie_factors[val]
+                df[unicode(group_title, 'utf-8')] += self.pie_factors[val]
             if good_values:
                 result[group_title].good = ', '.join(good_values)
         summary_elements = self.get_summary_elements()

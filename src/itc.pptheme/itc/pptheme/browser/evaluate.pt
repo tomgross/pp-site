@@ -16,7 +16,7 @@
 
     <h2>Testergebnis</h2>
 
-    <p tal:content="result/summary"></p>
+    <p tal:content="structure result/summary"></p>
 
     <img src="" tal:attributes="src view/chart_img" />
 

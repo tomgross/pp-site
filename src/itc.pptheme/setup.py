@@ -5,7 +5,7 @@ version = '1.0'
 
 setup(name='itc.pptheme',
       version=version,
-      description="An installable theme for Plone 3.0",
+      description="Plone customization for plone site",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
@@ -19,7 +19,7 @@ setup(name='itc.pptheme',
       keywords='web zope plone theme',
       author='Tom Gross',
       author_email='itconsense@gmail.com',
-      url='http://svn.plone.org/svn/collective/',
+      url='https://github.com/tomgross/pp-site',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['itc'],

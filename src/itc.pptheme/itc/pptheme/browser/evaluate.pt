@@ -14,17 +14,31 @@
 <metal:main fill-slot="main">
 <div id="content-core" tal:define="result python:view.text_blocks()">
 
-    <h2>Testergebnis</h2>
+    <h1 class="testresult">Testergebnis</h1>
 
     <p tal:content="structure result/summary"></p>
 
-    <img src="" tal:attributes="src view/chart_img" />
+  <div class="row legende">
+    <div class="col-md-8">
+      <img src="" tal:attributes="src view/chart_img" class="img-responsive" />
+    </div>
+    <div class="col-md-4">
+    <h4>Legende</h4>
+    <ol>
+    <li tal:repeat="legend view/legend" tal:content="legend">
+    </li>
+    </ol>
 
-    <h2>Detailierte Ergebnisse des Tests</h2>
+    </div>
+  </div>
+
+
+
+    <h2 class="testresult">Detailierte Ergebnisse des Tests</h2>
 
     <tal:loop repeat="items result/items">
         <tal:if define="group_title python:items[0]" condition="python:group_title != 'summary'">
-        <h3 tal:content="group_title"></h3>
+        <h3 tal:content="group_title" class="testresult"></h3>
 
         <p>
         Sie haben folgende Stärken: <strong tal:content="python:items[1].good"></strong>
@@ -35,7 +49,7 @@
 
         <tal:loop repeat="text python:items[1].details.items()">
             <tal:if define="title python:text[0]"  condition="python:title != 'good'">
-        <h4 tal:content="title"></h4>
+        <h4 tal:content="title" class="testresult"></h4>
             <p tal:content="python:text[1]"></p>
             </tal:if>
         </tal:loop>

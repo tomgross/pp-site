@@ -29,9 +29,9 @@ class UpgradeIt(BrowserView):
 
 class Result(object):
 
-    details = {}
-    good = ''
-    title = ''
+    def __init__(self):
+        self.good = ''
+        self.details = {}
 
 
 class EvaluateTestView(BrowserView):
@@ -64,14 +64,15 @@ class EvaluateTestView(BrowserView):
         result = OrderedDict()
         form = self.request.form
         summary = 0
-        df = {}
+        df = OrderedDict()
         elements = self.get_detail_elements()
-        for group in elements.keys():
+        for i, group in enumerate(elements.keys()):
             if group not in form:
                 continue
             group_title = self.context[group].Title()
             result[group_title] = Result()
             good_values = []
+
             for key, val in form[group].items():
                 summary += self.factors[val]
                 element = elements[group].get(key, self.no_text)
@@ -95,11 +96,12 @@ class EvaluateTestView(BrowserView):
         summary_elements = self.get_summary_elements()
         if summary < 20:
             result['summary'] = summary_elements['bad']
-        elif 20 >= summary < 70:
+        elif 20 >= summary < 90:
             result['summary'] = summary_elements['med']
         else:
             result['summary'] = summary_elements['good']
         self.chart_img = 'data:image/jpeg;base64, ' + self.get_radar_chart(df)
+        self.legend = df.keys()
         return result
 
     def get_radar_chart(self, df):
@@ -109,7 +111,6 @@ class EvaluateTestView(BrowserView):
 
         # We are going to plot the first line of the data frame.
         # But we need to repeat the first value to close the circular graph:
-        # import pdb; pdb.set_trace()
         values = df.values()
         values.append(values[0])
 
@@ -122,12 +123,12 @@ class EvaluateTestView(BrowserView):
         ax = plt.subplot(111, polar=True)
 
         # Draw one axe per variable + add labels labels yet
-        plt.xticks(angles[:-1], categories, color='grey', size=8)
+        plt.xticks(angles[:-1], range(1, N+1), color='grey', size=8, rotation='vertical')
 
         # Draw ylabels
         ax.set_rlabel_position(0)
-        plt.yticks([10], ["10"], color="grey", size=7)
-        plt.ylim(0, 20)
+        plt.yticks([])
+        plt.ylim(0, min(21, max(values)) + 1)
 
         # Plot data
         ax.plot(angles, values, linewidth=1, linestyle='solid')

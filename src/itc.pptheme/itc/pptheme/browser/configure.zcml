@@ -44,22 +44,6 @@
         layer=".interfaces.IThemeSpecific"
         />
 
-    <!-- Zope 3 browser resources -->
-
-    <!-- Resource directory for images -->
-    <browser:resourceDirectory
-        name="itc.pptheme.images"
-        directory="images"
-        layer=".interfaces.IThemeSpecific"
-        />
-
-    <!-- Resource directory for stylesheets -->
-    <browser:resourceDirectory
-        name="itc.pptheme.stylesheets"
-        directory="stylesheets"
-        layer=".interfaces.IThemeSpecific"
-        />
-
     <browser:page
         name="evaluate"
         for="*"

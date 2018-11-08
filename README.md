@@ -41,6 +41,6 @@ This is the Plone customization of the PP website.
        'good': 'Good summary'
    }
    ```
-   The hard coded threshold for the texts is BAD < 20 (MED) < 70 (GOOD)
+   The hard coded threshold for the texts is BAD < 20 (MED) < 90 (GOOD)
    
    

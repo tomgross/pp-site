@@ -7,10 +7,14 @@ from Products.Five import BrowserView
 from plone import api
 
 import base64
+import logging
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import six
+
+
+LOG = logging.getLogger('evaluate')
 
 
 class UpgradeIt(BrowserView):
@@ -38,10 +42,10 @@ class EvaluateTestView(BrowserView):
 
     no_text = 'Kein Textbaustein'
     factors = {
-        'Meistens': 3,
-        'Manchmal': 1,
-        'Selten': 0,
-        'Nie': -2
+        'Meistens': 5,
+        'Manchmal': 3,
+        'Selten': 1,
+        'Nie': 0
     }
     pie_factors = {
         'Meistens': 3,
@@ -93,10 +97,12 @@ class EvaluateTestView(BrowserView):
                 df[u_group_title] += self.pie_factors[val]
             if good_values:
                 result[group_title].good = ', '.join(good_values)
+            if not result[group_title].details:
+                LOG.warn('Details of group {0} are empty!'.format(group))
         summary_elements = self.get_summary_elements()
-        if summary < 20:
+        if summary < 75:
             result['summary'] = summary_elements['bad']
-        elif 20 >= summary < 90:
+        elif 75 >= summary < 130:
             result['summary'] = summary_elements['med']
         else:
             result['summary'] = summary_elements['good']
@@ -105,6 +111,7 @@ class EvaluateTestView(BrowserView):
         return result
 
     def get_radar_chart(self, df):
+        LOG.info('{0}'.format(df))
         # number of variable
         categories = list(df)
         N = len(categories)

@@ -20,7 +20,8 @@
 
   <div class="row legende">
     <div class="col-md-8">
-      <img src="" tal:attributes="src view/chart_img" class="img-responsive" />
+      <img src="" tal:attributes="src view/chart_img" class="img-responsive" alt="Auftrittskomptenz - Diagramm"
+           title="Auswertung Test der Auftrittskompetenz" />
     </div>
     <div class="col-md-4">
     <h4>Legende</h4>
@@ -32,16 +33,14 @@
     </div>
   </div>
 
-
-
     <h2 class="testresult">Detailierte Ergebnisse des Tests</h2>
 
     <tal:loop repeat="items result/items">
         <tal:if define="group_title python:items[0]" condition="python:group_title != 'summary'">
         <h3 tal:content="group_title" class="testresult"></h3>
 
-        <p>
-        Sie haben folgende Stärken: <strong tal:content="python:items[1].good"></strong>
+        <p tal:define="good python:items[1].good" tal:condition="good">
+        Sie haben folgende Stärken: <strong tal:content="good"></strong>
         </p>
         <p>
         Verbessern können Sie sich in folgenden Bereichen:

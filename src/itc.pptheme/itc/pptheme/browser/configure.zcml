@@ -52,6 +52,13 @@
         template="evaluate.pt"
         />
 
+    <browser:page
+        name="fullresult"
+        for="*"
+        permission="zope2.View"
+        template="fullresult.pt"
+        />
+
      <!-- Register the portlet -->
      <plone:portlet
          name="itc.portlet.static.AnimateStaticPortlet"
